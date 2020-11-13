@@ -1,7 +1,7 @@
 import unittest
-from src.room import Room
-from src.guest import Guest
-from src.song import Song
+from classes.room import Room
+from classes.guest import Guest
+from classes.song import Song
 
 
 class TestRoom(unittest.TestCase):
