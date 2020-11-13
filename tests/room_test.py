@@ -9,7 +9,7 @@ class TestRoom(unittest.TestCase):
         self.room = Room("Cover Your Ears!", 15)
         self.room_small = Room("Tight Squeeze", 1)
         self.guest = Guest("Sid The Sloth", 33)
-        self.song = Song("Ask me if I'm a pineapple", "Are you a pineapple? No.")
+        self.song = Song("Hold a chicken in the air")
 
     
     def test_room_has_name(self):

@@ -1,5 +1,4 @@
 class Song:
 
-    def __init__(self, name, lyrics):
+    def __init__(self, name):
         self.name = name
-        self.lyrics = lyrics
