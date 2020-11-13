@@ -18,4 +18,7 @@ class TestRoom(unittest.TestCase):
     def test_room_start_at_0(self):
         self.assertEqual(0, self.room.guest_count())
 
-        
+
+    def test_song_start_at_0(self):
+        self.assertEqual(0, self.room.song_count())
+
