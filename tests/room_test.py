@@ -13,3 +13,9 @@ class TestRoom(unittest.TestCase):
     
     def test_room_has_capacity(self):
         self.assertEqual(15, self.room.capacity)
+
+
+    def test_room_start_at_0(self):
+        self.assertEqual(0, self.room.guest_count())
+
+        
