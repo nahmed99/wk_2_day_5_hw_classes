@@ -8,7 +8,7 @@ class TestRoom(unittest.TestCase):
     def setUp(self):
         self.room = Room("Cover Your Ears!", 15)
         self.room_small = Room("Tight Squeeze", 1)
-        self.guest = Guest("Sid The Sloth", 33)
+        self.guest = Guest("Sid The Sloth", 33.25)
         self.song = Song("Hold a chicken in the air")
 
     
