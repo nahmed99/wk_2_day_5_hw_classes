@@ -7,9 +7,9 @@ class TestRoom(unittest.TestCase):
         self.room = Room("Cover Your Ears!", 15)
 
     
-    def test_guest_has_name(self):
+    def test_room_has_name(self):
         self.assertEqual("Cover Your Ears!", self.room.name)
 
     
-    def test_guest_has_age(self):
+    def test_room_has_capacity(self):
         self.assertEqual(15, self.room.capacity)

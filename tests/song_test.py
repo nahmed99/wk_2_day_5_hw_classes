@@ -7,5 +7,9 @@ class TestSong(unittest.TestCase):
         self.song = Song("Bad", "You're a very naughty boy. Now go away.")
 
     
-    def test_guest_has_name(self):
+    def test_song_has_name(self):
         self.assertEqual("Bad", self.song.name)
+
+
+    def test_song_has_lyrics(self):
+        self.assertEqual("You're a very naughty boy. Now go away.", self.song.lyrics)
