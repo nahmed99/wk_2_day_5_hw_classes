@@ -4,7 +4,7 @@ from src.song import Song
 
 class TestSong(unittest.TestCase):
     def setUp(self):
-        self.song = Song("Bad", "You're a very naughty boy. Now go away.")
+        self.song = Song("Bad", "You're bad. Behave yourself.")
 
     
     def test_song_has_name(self):
@@ -12,4 +12,4 @@ class TestSong(unittest.TestCase):
 
 
     def test_song_has_lyrics(self):
-        self.assertEqual("You're a very naughty boy. Now go away.", self.song.lyrics)
+        self.assertEqual("You're bad. Behave yourself.", self.song.lyrics)

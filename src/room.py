@@ -12,9 +12,19 @@ class Room:
         return len(self.guests)
 
 
-    def song_count(self):
-        return len(self.songs)
-    
-
     def check_in(self, new_guest):
         self.guests.append(new_guest)
+
+
+    def check_out(self, guest_name):
+        for guest in self.guests:
+            if guest.name == guest_name:
+                return guest
+
+
+    def song_count(self):
+        return len(self.songs)
+
+
+    def add_song(self, new_song):
+        self.songs.append(new_song)
