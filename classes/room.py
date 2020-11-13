@@ -28,3 +28,9 @@ class Room:
 
     def add_song(self, new_song):
         self.songs.append(new_song)
+
+
+    def check_capacity(self):
+        # return True if there is room for more guests
+        return self.guest_count() < self.capacity
+

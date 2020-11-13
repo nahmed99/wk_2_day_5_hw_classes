@@ -7,6 +7,7 @@ from classes.song import Song
 class TestRoom(unittest.TestCase):
     def setUp(self):
         self.room = Room("Cover Your Ears!", 15)
+        self.room_small = Room("Tight Squeeze", 1)
         self.guest = Guest("Sid The Sloth", 33)
         self.song = Song("Ask me if I'm a pineapple", "Are you a pineapple? No.")
 
@@ -44,3 +45,12 @@ class TestRoom(unittest.TestCase):
     def test_can_add_song(self):
         self.room.add_song(self.song)
         self.assertEqual(1, self.room.song_count())
+
+
+    def test_capacity_for_more_guests(self):
+        self.assertEqual(True, self.room.check_capacity())
+
+
+    def test_capacity_no_more_guests(self):
+        self.room_small.check_in(self.guest)
+        self.assertEqual(False, self.room_small.check_capacity())
