@@ -39,3 +39,8 @@ class Room:
     def confirm_guest_has_funds(self, guest):
         # return True if guest has sufficient funds to pay entry fee
         return guest.money >= self.entry_fee
+
+    
+    def take_fee_from_guest(self, guest):
+        if self.confirm_guest_has_funds(guest):
+            guest.money -= self.entry_fee

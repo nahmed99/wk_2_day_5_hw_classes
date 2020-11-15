@@ -68,4 +68,12 @@ class TestRoom(unittest.TestCase):
     def test_guest_has_not_funds(self):
         self.assertEqual(False, self.room.confirm_guest_has_funds(self.guest_no_money))
 
+
+    def test_take_fee_from_guest(self):
+        # Take fee from the guest
+        self.room.take_fee_from_guest(self.guest)
+
+        # The guest should now have 10 less than before
+        self.assertEqual(23.25, self.guest.money)
+
         
