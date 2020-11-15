@@ -44,3 +44,9 @@ class Room:
     def take_fee_from_guest(self, guest):
         if self.confirm_guest_has_funds(guest):
             guest.money -= self.entry_fee
+
+
+    def look_for_guest_fav_song(self, guest):
+        for song in self.songs:
+            if song.name == guest.fav_song:
+                return "Whoo!"

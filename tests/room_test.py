@@ -11,6 +11,7 @@ class TestRoom(unittest.TestCase):
         self.guest = Guest("Sid The Sloth", 33.25, "Hold a chicken in the air")
         self.guest_no_money = Guest("Scrooge", 3.99, "Yeah, right!")
         self.song = Song("Hold a chicken in the air")
+        self.song_not_fav = Song("Put that chair back")
 
     
     def test_room_has_name(self):
@@ -83,4 +84,15 @@ class TestRoom(unittest.TestCase):
 
         # The guest should still have the same amount of money as before.
         self.assertEqual(3.99, self.guest_no_money.money)
+
+
+    def test_look_for_guest_fav_song(self):  
+        self.room.add_song(self.song)
+        self.assertEqual("Whoo!", self.room.look_for_guest_fav_song(self.guest))
+
+    # def test_guests_fav_song_in_room(self):
+    #     # Add song to room
+    #     # Check if room has capacity to take more guests
+    #     # If so, check in guest to room
+    #     # Check if guest's fav_song is in room
         
