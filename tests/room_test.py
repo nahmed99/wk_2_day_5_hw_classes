@@ -9,7 +9,7 @@ class TestRoom(unittest.TestCase):
         self.room = Room("Cover Your Ears!", 15, 10)
         self.room_small = Room("Tight Squeeze", 1, 15)
         self.guest = Guest("Sid The Sloth", 33.25)
-        self.guest_no_money = Guest("Scrooge", 3.25)
+        self.guest_no_money = Guest("Scrooge", 3.99)
         self.song = Song("Hold a chicken in the air")
 
     
@@ -76,4 +76,11 @@ class TestRoom(unittest.TestCase):
         # The guest should now have 10 less than before
         self.assertEqual(23.25, self.guest.money)
 
+
+    def test_take_no_fee_from_guest(self):
+        # Try to take fee from the guest - this ones doesn't have sufficient funds
+        self.room_small.take_fee_from_guest(self.guest_no_money)
+
+        # The guest should still have the same amount of money as before.
+        self.assertEqual(3.99, self.guest_no_money.money)
         
