@@ -86,9 +86,14 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(3.99, self.guest_no_money.money)
 
 
-    def test_look_for_guest_fav_song(self):  
+    def test_for_guest_fav_song(self):  
         self.room.add_song(self.song)
         self.assertEqual("Whoo!", self.room.look_for_guest_fav_song(self.guest))
+
+
+    def test_for_no_guest_fav_song(self):  
+        self.room.add_song(self.song_not_fav)
+        self.assertEqual(None, self.room.look_for_guest_fav_song(self.guest))
 
     # def test_guests_fav_song_in_room(self):
     #     # Add song to room
