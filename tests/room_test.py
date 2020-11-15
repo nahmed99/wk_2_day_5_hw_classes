@@ -95,9 +95,4 @@ class TestRoom(unittest.TestCase):
         self.room.add_song(self.song_not_fav)
         self.assertEqual(None, self.room.look_for_guest_fav_song(self.guest))
 
-    # def test_guests_fav_song_in_room(self):
-    #     # Add song to room
-    #     # Check if room has capacity to take more guests
-    #     # If so, check in guest to room
-    #     # Check if guest's fav_song is in room
         
