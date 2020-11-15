@@ -9,6 +9,7 @@ class TestRoom(unittest.TestCase):
         self.room = Room("Cover Your Ears!", 15, 10)
         self.room_small = Room("Tight Squeeze", 1, 15)
         self.guest = Guest("Sid The Sloth", 33.25)
+        self.guest_no_money = Guest("Scrooge", 3.25)
         self.song = Song("Hold a chicken in the air")
 
     
@@ -58,3 +59,13 @@ class TestRoom(unittest.TestCase):
     def test_capacity_no_more_guests(self):
         self.room_small.check_in(self.guest)
         self.assertEqual(False, self.room_small.check_capacity())
+
+
+    def test_guest_has_funds(self):
+        self.assertEqual(True, self.room_small.confirm_guest_has_funds(self.guest))
+
+
+    # def test_guest_has_not_funds(self):
+    #     self.assertEqual(False, self.room.confirm_guest_has_funds(self.geust_2))
+
+        

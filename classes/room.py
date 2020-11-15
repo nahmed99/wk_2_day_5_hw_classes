@@ -35,3 +35,7 @@ class Room:
         # return True if there is room for more guests
         return self.guest_count() < self.capacity
 
+
+    def confirm_guest_has_funds(self, guest):
+        # return True if guest has sufficient funds to pay entry fee
+        return guest.money >= self.entry_fee
