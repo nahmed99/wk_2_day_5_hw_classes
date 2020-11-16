@@ -16,6 +16,7 @@ class Room:
     def check_in(self, new_guest):
         if self.check_capacity() and self.confirm_guest_has_funds(new_guest):
             # You should take fee from the guest at this point too!!!
+            ##### self.take_fee_from_guest(new_guest)
             self.guests.append(new_guest)
 
 
@@ -44,6 +45,7 @@ class Room:
 
     
     def take_fee_from_guest(self, guest):
+        # Should you really have the following if in this function? See function check_im above.
         if self.confirm_guest_has_funds(guest):
             guest.money -= self.entry_fee
 
