@@ -39,17 +39,20 @@ class Room:
         return self.guest_count() < self.capacity
 
 
+    
     def confirm_guest_has_funds(self, guest):
         # return True if guest has sufficient funds to pay entry fee
         return guest.money >= self.entry_fee
 
     
+    # this function should really be in the Guest class
     def take_fee_from_guest(self, guest):
         # Should you really have the following if in this function? See function check_im above.
         if self.confirm_guest_has_funds(guest):
             guest.money -= self.entry_fee
 
 
+    # this function should really be in the Guest class
     def look_for_guest_fav_song(self, guest):
         for song in self.songs:
             if song.name == guest.fav_song:
