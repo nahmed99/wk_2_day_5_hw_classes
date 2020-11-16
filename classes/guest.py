@@ -6,10 +6,13 @@ class Guest:
         self.fav_song = fav_song
 
 
-    # should have the 'afford', 'pay' and 'cheer' functions in this class!!!
+    # fav_song should have been a song object, not just a song string!!!
+    # fav_song should have been a song object, not just a song string!!!
+    # fav_song should have been a song object, not just a song string!!!
+    
 
     # should have the 'afford', 'pay' and 'cheer' functions in this class!!!
-
+    # should have the 'afford', 'pay' and 'cheer' functions in this class!!!
     # should have the 'afford', 'pay' and 'cheer' functions in this class!!!
 
     # DESIGN IT BETTER NEXT TIME!
