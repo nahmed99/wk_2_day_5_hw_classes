@@ -14,7 +14,9 @@ class Room:
 
 
     def check_in(self, new_guest):
-        self.guests.append(new_guest)
+        if self.check_capacity() and self.confirm_guest_has_funds(new_guest):
+            # You should take fee from the guest at this point too!!!
+            self.guests.append(new_guest)
 
 
     def check_out(self, guest_name):
